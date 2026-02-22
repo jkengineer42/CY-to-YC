@@ -4,8 +4,8 @@
  */
 
 export type MaterialCategory = 
-  | "Métal" | "Polymère" | "Céramique" | "Biosourcé" | "Composite"
-  | "Superalliage" | "Alliage Léger" | "Bois" | "Naturel";
+  | "Metal" | "Polymer" | "Ceramic" | "Biosourced" | "Composite"
+  | "Superalloy" | "Light Alloy" | "Wood" | "Natural";
 
 export type MaterialField = "Medicine" | "Architecture" | "Mechanics" | "Aerospace";
 
@@ -90,7 +90,7 @@ export const ORIGINES: Record<string, Origine> = {
 
 export const MATERIAUX: Record<string, Material> = {
   titane_grade5: {
-    key: "titane_grade5", nom: "Titane Grade 5 (Ti-6Al-4V CNC)", categorie: "Métal",
+    key: "titane_grade5", nom: "Titane Grade 5 (Ti-6Al-4V CNC)", categorie: "Metal",
     co2_kg_par_kg: 42.0, co2_range: [35.0, 52.0], module_elastique_gpa: 110.0, stress_shielding: 4,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["orthopédie", "traumatologie", "rachis", "dentaire", "genou", "hanche", "maxillo-facial", "neurochirurgie"],
@@ -102,7 +102,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Priarone et al. J Ind Ecol 2017; NJR 21st Report 2024",
   },
   titane_grade23: {
-    key: "titane_grade23", nom: "Titane Grade 23 (Ti-6Al-4V ELI)", categorie: "Métal",
+    key: "titane_grade23", nom: "Titane Grade 23 (Ti-6Al-4V ELI)", categorie: "Metal",
     co2_kg_par_kg: 44.0, co2_range: [37.0, 54.0], module_elastique_gpa: 110.0, stress_shielding: 4,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
     types_chirurgie: ["orthopédie", "hanche", "genou", "rachis", "traumatologie", "neurochirurgie"],
@@ -114,7 +114,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "ASTM F136; NJR 21st Report 2024",
   },
   titane_poreux_3d: {
-    key: "titane_poreux_3d", nom: "Titane Poreux Imprimé 3D (SLM)", categorie: "Métal",
+    key: "titane_poreux_3d", nom: "Titane Poreux Imprimé 3D (SLM)", categorie: "Metal",
     co2_kg_par_kg: 68.0, co2_range: [50.0, 95.0], module_elastique_gpa: 55.0, stress_shielding: 2,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["oncologie osseuse", "rachis", "hanche", "neurochirurgie", "reprise"],
@@ -126,7 +126,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Xiao et al. 2024 (CO2 SLM); Sing SL et al. 2021",
   },
   acier_316L: {
-    key: "acier_316L", nom: "Acier Inoxydable 316L", categorie: "Métal",
+    key: "acier_316L", nom: "Acier Inoxydable 316L", categorie: "Metal",
     co2_kg_par_kg: 5.1, co2_range: [4.2, 7.5], module_elastique_gpa: 200.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 10,
     types_chirurgie: ["traumatologie", "fixation externe", "rachis"],
@@ -138,7 +138,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ecoinvent 3.9; Hedberg 2014",
   },
   cobalt_chrome: {
-    key: "cobalt_chrome", nom: "Cobalt-Chrome (CoCrMo)", categorie: "Métal",
+    key: "cobalt_chrome", nom: "Cobalt-Chrome (CoCrMo)", categorie: "Metal",
     co2_kg_par_kg: 51.0, co2_range: [45.0, 58.0], module_elastique_gpa: 225.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 20,
     types_chirurgie: ["orthopédie", "hanche", "genou", "dentaire"],
@@ -150,7 +150,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "NJR PLOS Med 2024; Norgate 2004",
   },
   tantale_poreux: {
-    key: "tantale_poreux", nom: "Tantale Poreux (Trabecular Metal™)", categorie: "Métal",
+    key: "tantale_poreux", nom: "Tantale Poreux (Trabecular Metal)", categorie: "Metal",
     co2_kg_par_kg: 152.0, co2_range: [120.0, 200.0], module_elastique_gpa: 3.0, stress_shielding: 1,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
     types_chirurgie: ["oncologie osseuse", "reprise", "hanche", "genou"],
@@ -162,7 +162,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Levine B. 2008; Norgate & Rankin 2002",
   },
   nitinol: {
-    key: "nitinol", nom: "Nitinol NiTi (Superélastique)", categorie: "Métal",
+    key: "nitinol", nom: "Nitinol NiTi (Superelastic)", categorie: "Metal",
     co2_kg_par_kg: 91.0, co2_range: [70.0, 120.0], module_elastique_gpa: 48.0, stress_shielding: 2,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 20,
     types_chirurgie: ["rachis", "cardiovasculaire", "vasculaire"],
@@ -174,7 +174,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Morgan NB. Mater Sci Eng C 2004",
   },
   magnesium_bio: {
-    key: "magnesium_bio", nom: "Magnésium Bio-résorbable (WE43)", categorie: "Métal",
+    key: "magnesium_bio", nom: "Bio-resorbable Magnesium (WE43)", categorie: "Metal",
     co2_kg_par_kg: 18.5, co2_range: [12.0, 26.0], module_elastique_gpa: 45.0, stress_shielding: 2,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 2,
     types_chirurgie: ["pédiatrie", "traumatologie", "main", "orthopédie"],
@@ -186,7 +186,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Zhao D. Biomaterials 2017",
   },
   peek: {
-    key: "peek", nom: "PEEK Standard (Victrex® 450G)", categorie: "Polymère",
+    key: "peek", nom: "PEEK Standard (Victrex 450G)", categorie: "Polymer",
     co2_kg_par_kg: 9.8, co2_range: [7.5, 13.0], module_elastique_gpa: 3.6, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["rachis", "neurochirurgie", "maxillo-facial"],
@@ -198,7 +198,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Kurtz SM & Devine JN. Biomaterials 2007",
   },
   peek_cf: {
-    key: "peek_cf", nom: "PEEK Fibres Carbone (CFR-PEEK)", categorie: "Composite",
+    key: "peek_cf", nom: "PEEK Carbon Fiber (CFR-PEEK)", categorie: "Composite",
     co2_kg_par_kg: 29.0, co2_range: [22.0, 38.0], module_elastique_gpa: 18.0, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["oncologie osseuse", "rachis", "neurochirurgie"],
@@ -210,7 +210,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Duflou JR CIRP 2012",
   },
   uhmwpe_vit_e: {
-    key: "uhmwpe_vit_e", nom: "UHMWPE Réticulé + Vitamine E", categorie: "Polymère",
+    key: "uhmwpe_vit_e", nom: "UHMWPE Cross-linked + Vitamin E", categorie: "Polymer",
     co2_kg_par_kg: 3.4, co2_range: [2.8, 4.5], module_elastique_gpa: 0.8, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 20,
     types_chirurgie: ["orthopédie", "genou", "hanche"],
@@ -222,7 +222,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Kurtz SM UHMWPE Handbook 2016",
   },
   pla_bio: {
-    key: "pla_bio", nom: "PLA Biosourcé (Acide Polylactique)", categorie: "Polymère",
+    key: "pla_bio", nom: "PLA Bio-based (Polylactic Acid)", categorie: "Polymer",
     co2_kg_par_kg: 2.2, co2_range: [1.4, 3.0], module_elastique_gpa: 3.5, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 2,
     types_chirurgie: ["pédiatrie", "main", "maxillo-facial", "ophtalmologie"],
@@ -234,7 +234,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Vink E. Polym Degrad Stab 2004",
   },
   plga_resorbable: {
-    key: "plga_resorbable", nom: "PLGA 75:25 (Copolymère Résorbable)", categorie: "Polymère",
+    key: "plga_resorbable", nom: "PLGA 75:25 (Resorbable Copolymer)", categorie: "Polymer",
     co2_kg_par_kg: 3.0, co2_range: [2.2, 4.0], module_elastique_gpa: 2.0, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 1,
     types_chirurgie: ["pédiatrie", "traumatologie", "ophtalmologie", "main"],
@@ -246,7 +246,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Athanasiou KA. Biomaterials 1996",
   },
   pmma_neuro: {
-    key: "pmma_neuro", nom: "PMMA Chirurgical (Ciment Acrylique)", categorie: "Polymère",
+    key: "pmma_neuro", nom: "PMMA Surgical (Acrylic Cement)", categorie: "Polymer",
     co2_kg_par_kg: 4.5, co2_range: [3.2, 6.0], module_elastique_gpa: 2.5, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 15,
     types_chirurgie: ["neurochirurgie", "rachis", "cranioplastie"],
@@ -258,7 +258,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Kühn KD. Bone Cement 2000",
   },
   polyuretane_bio: {
-    key: "polyuretane_bio", nom: "Polyuréthane Biostable (Biospan™)", categorie: "Polymère",
+    key: "polyuretane_bio", nom: "Biostable Polyurethane (Biospan)", categorie: "Polymer",
     co2_kg_par_kg: 5.5, co2_range: [4.0, 7.5], module_elastique_gpa: 0.05, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 15,
     types_chirurgie: ["cardiovasculaire", "vasculaire", "reconstruction"],
@@ -270,7 +270,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Zdrahala RJ. J Biomater Appl 1999",
   },
   ptfe_expanded: {
-    key: "ptfe_expanded", nom: "ePTFE Gore-Tex® Expanded", categorie: "Polymère",
+    key: "ptfe_expanded", nom: "ePTFE Gore-Tex Expanded", categorie: "Polymer",
     co2_kg_par_kg: 9.1, co2_range: [7.0, 12.0], module_elastique_gpa: 0.1, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 20,
     types_chirurgie: ["cardiovasculaire", "vasculaire", "reconstruction"],
@@ -282,7 +282,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Sefton MV 2002",
   },
   silicone_medical: {
-    key: "silicone_medical", nom: "Silicone Médical Grade Implant", categorie: "Polymère",
+    key: "silicone_medical", nom: "Medical Grade Silicone Implant", categorie: "Polymer",
     co2_kg_par_kg: 6.2, co2_range: [4.5, 8.5], module_elastique_gpa: 0.002, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 15,
     types_chirurgie: ["reconstruction", "main", "ophtalmologie", "maxillo-facial"],
@@ -294,7 +294,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ratner BD. Biomaterials Science 2004",
   },
   hydroxyapatite: {
-    key: "hydroxyapatite", nom: "Hydroxyapatite Synthétique (HA)", categorie: "Céramique",
+    key: "hydroxyapatite", nom: "Synthetic Hydroxyapatite (HA)", categorie: "Ceramic",
     co2_kg_par_kg: 3.1, co2_range: [2.0, 5.0], module_elastique_gpa: 80.0, stress_shielding: 3,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 10,
     types_chirurgie: ["dentaire", "orthopédie", "rachis", "maxillo-facial"],
@@ -306,7 +306,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Dorozhkin SV. Acta Biomater 2010",
   },
   alumine: {
-    key: "alumine", nom: "Alumine Al₂O₃ (BIOLOX® forte)", categorie: "Céramique",
+    key: "alumine", nom: "Alumina Al2O3 (BIOLOX forte)", categorie: "Ceramic",
     co2_kg_par_kg: 8.5, co2_range: [6.0, 11.0], module_elastique_gpa: 380.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["orthopédie", "hanche", "genou"],
@@ -318,7 +318,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Chevalier J. Biomaterials 2006; NJR PLOS Med 2024",
   },
   alumine_zircone: {
-    key: "alumine_zircone", nom: "Composite AMC Alumine-Zircone (BIOLOX® delta)", categorie: "Céramique",
+    key: "alumine_zircone", nom: "AMC Composite Alumina-Zirconia (BIOLOX delta)", categorie: "Ceramic",
     co2_kg_par_kg: 10.5, co2_range: [8.0, 14.0], module_elastique_gpa: 350.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
     types_chirurgie: ["hanche", "genou", "orthopédie"],
@@ -330,7 +330,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "NJR PLOS Med 2024 — delta ceramic hanche",
   },
   zircone: {
-    key: "zircone", nom: "Zircone Y-TZP (Stabilisée Yttrium)", categorie: "Céramique",
+    key: "zircone", nom: "Zirconia Y-TZP (Yttrium Stabilized)", categorie: "Ceramic",
     co2_kg_par_kg: 12.8, co2_range: [9.0, 17.0], module_elastique_gpa: 200.0, stress_shielding: 4,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 25,
     types_chirurgie: ["dentaire", "hanche", "ophtalmologie"],
@@ -342,7 +342,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Piconi C. Biomaterials 1999",
   },
   tcp_beta: {
-    key: "tcp_beta", nom: "β-TCP (Phosphate Tricalcique Bêta)", categorie: "Céramique",
+    key: "tcp_beta", nom: "Beta-TCP (Beta Tricalcium Phosphate)", categorie: "Ceramic",
     co2_kg_par_kg: 2.8, co2_range: [1.8, 4.0], module_elastique_gpa: 33.0, stress_shielding: 2,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 2,
     types_chirurgie: ["dentaire", "maxillo-facial", "orthopédie"],
@@ -354,7 +354,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Bohner M. Injury 2000",
   },
   bioglass: {
-    key: "bioglass", nom: "Bioglass 45S5 (Verre Bioactif)", categorie: "Céramique",
+    key: "bioglass", nom: "Bioglass 45S5 (Bioactive Glass)", categorie: "Ceramic",
     co2_kg_par_kg: 4.2, co2_range: [3.0, 6.0], module_elastique_gpa: 35.0, stress_shielding: 2,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 3,
     types_chirurgie: ["ORL", "dentaire", "reconstruction", "maxillo-facial"],
@@ -366,7 +366,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Hench LL. Science 1984",
   },
   os_allogene: {
-    key: "os_allogene", nom: "Os Allogène Humain (Banque d'Os)", categorie: "Biosourcé",
+    key: "os_allogene", nom: "Human Allograft Bone (Bone Bank)", categorie: "Biosourced",
     co2_kg_par_kg: 1.8, co2_range: [0.8, 3.5], module_elastique_gpa: 18.0, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 5,
     types_chirurgie: ["oncologie osseuse", "rachis", "orthopédie"],
@@ -378,7 +378,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Vavken P. JBJS Am 2010",
   },
   collagene_bovin: {
-    key: "collagene_bovin", nom: "Collagène Bovin Réticulé", categorie: "Biosourcé",
+    key: "collagene_bovin", nom: "Cross-linked Bovine Collagen", categorie: "Biosourced",
     co2_kg_par_kg: 2.5, co2_range: [1.5, 4.0], module_elastique_gpa: 0.5, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 1,
     types_chirurgie: ["reconstruction", "ophtalmologie", "maxillo-facial"],
@@ -390,7 +390,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Lee CH. J Biomed Mater Res 2001",
   },
   acide_hyaluronique: {
-    key: "acide_hyaluronique", nom: "Acide Hyaluronique Réticulé (HA-XL)", categorie: "Biosourcé",
+    key: "acide_hyaluronique", nom: "Cross-linked Hyaluronic Acid (HA-XL)", categorie: "Biosourced",
     co2_kg_par_kg: 1.5, co2_range: [0.8, 2.5], module_elastique_gpa: 0.001, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 1,
     types_chirurgie: ["ophtalmologie", "reconstruction"],
@@ -402,7 +402,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Prestwich GD. J Control Release 2011",
   },
   xenogreffe_porcine: {
-    key: "xenogreffe_porcine", nom: "Xénogreffe Porcine Décellularisée", categorie: "Biosourcé",
+    key: "xenogreffe_porcine", nom: "Decellularized Porcine Xenograft", categorie: "Biosourced",
     co2_kg_par_kg: 3.2, co2_range: [2.0, 5.0], module_elastique_gpa: 0.05, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 10,
     types_chirurgie: ["cardiovasculaire", "reconstruction"],
@@ -414,7 +414,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Naso F. Sci Rep 2016",
   },
   pyrocarbone: {
-    key: "pyrocarbone", nom: "Pyrocarbone (LTI PyC)", categorie: "Composite",
+    key: "pyrocarbone", nom: "Pyrocarbon (LTI PyC)", categorie: "Composite",
     co2_kg_par_kg: 25.0, co2_range: [18.0, 35.0], module_elastique_gpa: 28.0, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 15,
     types_chirurgie: ["main", "orthopédie", "cardiovasculaire"],
@@ -426,7 +426,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Cook SD. Clin Orthop 1992",
   },
   scaffold_pcl: {
-    key: "scaffold_pcl", nom: "Scaffold PCL Imprimé 3D (Polycaprolactone)", categorie: "Composite",
+    key: "scaffold_pcl", nom: "3D Printed PCL Scaffold (Polycaprolactone)", categorie: "Composite",
     co2_kg_par_kg: 3.3, co2_range: [2.2, 5.0], module_elastique_gpa: 0.4, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 3,
     types_chirurgie: ["reconstruction", "pédiatrie", "maxillo-facial"],
@@ -438,7 +438,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Woodruff MA. Prog Polym Sci 2010",
   },
   dacron_polyester: {
-    key: "dacron_polyester", nom: "Dacron Polyester Tressé (Woven PET)", categorie: "Composite",
+    key: "dacron_polyester", nom: "Dacron Woven Polyester (PET)", categorie: "Composite",
     co2_kg_par_kg: 5.8, co2_range: [4.5, 7.5], module_elastique_gpa: 2.0, stress_shielding: 1,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 20,
     types_chirurgie: ["cardiovasculaire", "vasculaire", "reconstruction"],
@@ -451,7 +451,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ SUPERALLOYS — Mechanics / Aerospace ═══════
   inconel_718: {
-    key: "inconel_718", nom: "Inconel 718 (Ni-Cr-Fe)", categorie: "Superalliage",
+    key: "inconel_718", nom: "Inconel 718 (Ni-Cr-Fe)", categorie: "Superalloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 38.0, co2_range: [30.0, 48.0], module_elastique_gpa: 205.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -463,7 +463,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Special Metals — Inconel 718 datasheet",
   },
   inconel_617: {
-    key: "inconel_617", nom: "Inconel 617 (Solution Strengthened)", categorie: "Superalliage",
+    key: "inconel_617", nom: "Inconel 617 (Solution Strengthened)", categorie: "Superalloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 42.0, co2_range: [35.0, 52.0], module_elastique_gpa: 211.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 25,
@@ -475,7 +475,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "ASME SB-168; Haynes Int.",
   },
   ma754_ods: {
-    key: "ma754_ods", nom: "MA754 ODS (Ni-Cr-Y₂O₃)", categorie: "Superalliage",
+    key: "ma754_ods", nom: "MA754 ODS (Ni-Cr-Y2O3)", categorie: "Superalloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 55.0, co2_range: [45.0, 70.0], module_elastique_gpa: 220.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -487,7 +487,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Special Metals — MA754 ODS alloy",
   },
   hastelloy_x: {
-    key: "hastelloy_x", nom: "Hastelloy X (Ni-Cr-Fe-Mo)", categorie: "Superalliage",
+    key: "hastelloy_x", nom: "Hastelloy X (Ni-Cr-Fe-Mo)", categorie: "Superalloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 40.0, co2_range: [32.0, 50.0], module_elastique_gpa: 205.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 25,
@@ -500,7 +500,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ LIGHT ALLOYS — Mechanics / Aerospace ═══════
   aluminium_7075: {
-    key: "aluminium_7075", nom: "Aluminium 7075-T6", categorie: "Alliage Léger",
+    key: "aluminium_7075", nom: "Aluminium 7075-T6", categorie: "Light Alloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 12.5, co2_range: [9.0, 16.0], module_elastique_gpa: 72.0, stress_shielding: 3,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -512,7 +512,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ecoinvent 3.9; Constellium",
   },
   aluminium_2024: {
-    key: "aluminium_2024", nom: "Aluminium 2024-T3", categorie: "Alliage Léger",
+    key: "aluminium_2024", nom: "Aluminium 2024-T3", categorie: "Light Alloy",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 11.8, co2_range: [8.5, 15.0], module_elastique_gpa: 73.0, stress_shielding: 3,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -524,7 +524,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ecoinvent 3.9; Alcoa",
   },
   titane_grade2_aero: {
-    key: "titane_grade2_aero", nom: "Titane Grade 2 (CP Ti)", categorie: "Alliage Léger",
+    key: "titane_grade2_aero", nom: "Titanium Grade 2 (CP Ti)", categorie: "Light Alloy",
     fields: ["Aerospace", "Mechanics"],
     co2_kg_par_kg: 36.0, co2_range: [28.0, 45.0], module_elastique_gpa: 105.0, stress_shielding: 4,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -537,7 +537,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ COMPOSITES — Aerospace / Mechanics ═══════
   sic_sic_cmc: {
-    key: "sic_sic_cmc", nom: "SiC-SiC CMC (Composite Céramique)", categorie: "Composite",
+    key: "sic_sic_cmc", nom: "SiC-SiC CMC (Ceramic Matrix Composite)", categorie: "Composite",
     fields: ["Aerospace", "Mechanics"],
     co2_kg_par_kg: 28.0, co2_range: [20.0, 38.0], module_elastique_gpa: 300.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
@@ -549,7 +549,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "GE Aviation CMC data; Bansal & Lamon 2015",
   },
   carbone_t700: {
-    key: "carbone_t700", nom: "Fibre de Carbone T700/Époxy", categorie: "Composite",
+    key: "carbone_t700", nom: "Carbon Fiber T700/Epoxy", categorie: "Composite",
     fields: ["Aerospace", "Mechanics"],
     co2_kg_par_kg: 22.0, co2_range: [16.0, 30.0], module_elastique_gpa: 135.0, stress_shielding: 4,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
@@ -561,7 +561,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Toray T700S datasheet; Duflou CIRP 2012",
   },
   carbone_m55j: {
-    key: "carbone_m55j", nom: "Fibre de Carbone M55J/Époxy (Haut Module)", categorie: "Composite",
+    key: "carbone_m55j", nom: "Carbon Fiber M55J/Epoxy (High Modulus)", categorie: "Composite",
     fields: ["Aerospace"],
     co2_kg_par_kg: 35.0, co2_range: [25.0, 45.0], module_elastique_gpa: 338.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
@@ -573,7 +573,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Toray M55J datasheet",
   },
   kevlar_aramide: {
-    key: "kevlar_aramide", nom: "Kevlar® 49 / Aramide", categorie: "Composite",
+    key: "kevlar_aramide", nom: "Kevlar 49 / Aramid", categorie: "Composite",
     fields: ["Aerospace", "Mechanics"],
     co2_kg_par_kg: 18.0, co2_range: [14.0, 24.0], module_elastique_gpa: 125.0, stress_shielding: 4,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 25,
@@ -586,7 +586,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ CERAMICS — Mechanics / Aerospace ═══════
   carbure_silicium: {
-    key: "carbure_silicium", nom: "Carbure de Silicium (SiC)", categorie: "Céramique",
+    key: "carbure_silicium", nom: "Silicon Carbide (SiC)", categorie: "Ceramic",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 15.0, co2_range: [10.0, 22.0], module_elastique_gpa: 450.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
@@ -598,7 +598,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Saint-Gobain Ceramics; Ecoinvent",
   },
   nitrure_silicium: {
-    key: "nitrure_silicium", nom: "Nitrure de Silicium (Si₃N₄)", categorie: "Céramique",
+    key: "nitrure_silicium", nom: "Silicon Nitride (Si3N4)", categorie: "Ceramic",
     fields: ["Mechanics", "Aerospace"],
     co2_kg_par_kg: 18.0, co2_range: [12.0, 25.0], module_elastique_gpa: 310.0, stress_shielding: 5,
     recyclable: false, biodegradable: false, duree_vie_implant_ans: 30,
@@ -611,7 +611,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ WOOD — Architecture ═══════
   bois_clt: {
-    key: "bois_clt", nom: "Bois CLT (Cross-Laminated Timber)", categorie: "Bois",
+    key: "bois_clt", nom: "CLT (Cross-Laminated Timber)", categorie: "Wood",
     fields: ["Architecture"],
     co2_kg_par_kg: -1.6, co2_range: [-2.0, -0.8], module_elastique_gpa: 12.0, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 60,
@@ -623,7 +623,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "FPInnovations CLT Handbook; Ecoinvent",
   },
   bois_lamelle_colle: {
-    key: "bois_lamelle_colle", nom: "Bois Lamellé-Collé (Glulam)", categorie: "Bois",
+    key: "bois_lamelle_colle", nom: "Glued Laminated Timber (Glulam)", categorie: "Wood",
     fields: ["Architecture"],
     co2_kg_par_kg: -1.2, co2_range: [-1.8, -0.5], module_elastique_gpa: 14.0, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 50,
@@ -635,7 +635,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "EN 14080; Ecoinvent 3.9",
   },
   bambou_lamelle: {
-    key: "bambou_lamelle", nom: "Bambou Lamellé Structural", categorie: "Bois",
+    key: "bambou_lamelle", nom: "Structural Laminated Bamboo", categorie: "Wood",
     fields: ["Architecture"],
     co2_kg_par_kg: -0.8, co2_range: [-1.2, 0.5], module_elastique_gpa: 10.0, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 30,
@@ -648,7 +648,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ NATURAL — Architecture ═══════
   chanvre_chaux: {
-    key: "chanvre_chaux", nom: "Béton de Chanvre (Chanvre-Chaux)", categorie: "Naturel",
+    key: "chanvre_chaux", nom: "Hempcrete (Hemp-Lime)", categorie: "Natural",
     fields: ["Architecture"],
     co2_kg_par_kg: -0.3, co2_range: [-0.6, 0.2], module_elastique_gpa: 0.015, stress_shielding: 1,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 50,
@@ -660,7 +660,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Construire en Chanvre; Pretot 2014",
   },
   laine_bois: {
-    key: "laine_bois", nom: "Laine de Bois (Fibre Isolante)", categorie: "Naturel",
+    key: "laine_bois", nom: "Wood Fiber Insulation", categorie: "Natural",
     fields: ["Architecture"],
     co2_kg_par_kg: -0.5, co2_range: [-0.8, 0.1], module_elastique_gpa: 0.003, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 40,
@@ -672,7 +672,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Steico; FDES Base INIES",
   },
   liege_expanse: {
-    key: "liege_expanse", nom: "Liège Expansé (Isolant)", categorie: "Naturel",
+    key: "liege_expanse", nom: "Expanded Cork Insulation", categorie: "Natural",
     fields: ["Architecture"],
     co2_kg_par_kg: -0.7, co2_range: [-1.0, -0.2], module_elastique_gpa: 0.005, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 50,
@@ -684,7 +684,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Amorim Cork; Ecoinvent",
   },
   terre_crue: {
-    key: "terre_crue", nom: "Terre Crue Compressée (BTC)", categorie: "Naturel",
+    key: "terre_crue", nom: "Compressed Earth Block (CEB)", categorie: "Natural",
     fields: ["Architecture"],
     co2_kg_par_kg: 0.05, co2_range: [0.02, 0.1], module_elastique_gpa: 2.0, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 100,
@@ -696,7 +696,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "CRATerre; Morel 2001",
   },
   paille_porteuse: {
-    key: "paille_porteuse", nom: "Bottes de Paille Porteuses", categorie: "Naturel",
+    key: "paille_porteuse", nom: "Structural Straw Bales", categorie: "Natural",
     fields: ["Architecture"],
     co2_kg_par_kg: -1.3, co2_range: [-1.8, -0.5], module_elastique_gpa: 0.001, stress_shielding: 1,
     recyclable: true, biodegradable: true, duree_vie_implant_ans: 40,
@@ -709,7 +709,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ BIOSOURCE / COMPOSITE — Architecture ═══════
   lin_composite: {
-    key: "lin_composite", nom: "Composite Lin-Époxy (Bio-composite)", categorie: "Composite",
+    key: "lin_composite", nom: "Flax-Epoxy Composite (Bio-composite)", categorie: "Composite",
     fields: ["Architecture", "Mechanics"],
     co2_kg_par_kg: 5.5, co2_range: [3.5, 8.0], module_elastique_gpa: 30.0, stress_shielding: 2,
     recyclable: false, biodegradable: true, duree_vie_implant_ans: 25,
@@ -722,7 +722,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ CERAMIQUE — Architecture ═══════
   beton_bas_carbone: {
-    key: "beton_bas_carbone", nom: "Béton Bas Carbone (CEM III/B)", categorie: "Céramique",
+    key: "beton_bas_carbone", nom: "Low-Carbon Concrete (CEM III/B)", categorie: "Ceramic",
     fields: ["Architecture"],
     co2_kg_par_kg: 0.08, co2_range: [0.05, 0.12], module_elastique_gpa: 30.0, stress_shielding: 2,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 100,
@@ -734,7 +734,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ecoinvent 3.9; ATILH",
   },
   geopolymere: {
-    key: "geopolymere", nom: "Géopolymère (Laitier + Métakaolin)", categorie: "Céramique",
+    key: "geopolymere", nom: "Geopolymer (Slag + Metakaolin)", categorie: "Ceramic",
     fields: ["Architecture"],
     co2_kg_par_kg: 0.04, co2_range: [0.02, 0.08], module_elastique_gpa: 25.0, stress_shielding: 2,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 80,
@@ -747,7 +747,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ POLYMERE — Architecture / Mechanics ═══════
   polycarbonate: {
-    key: "polycarbonate", nom: "Polycarbonate (PC)", categorie: "Polymère",
+    key: "polycarbonate", nom: "Polycarbonate (PC)", categorie: "Polymer",
     fields: ["Architecture", "Mechanics"],
     co2_kg_par_kg: 7.5, co2_range: [5.5, 10.0], module_elastique_gpa: 2.4, stress_shielding: 1,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 20,
@@ -759,7 +759,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "Ecoinvent 3.9; Covestro",
   },
   etfe_membrane: {
-    key: "etfe_membrane", nom: "ETFE (Membrane Architecturale)", categorie: "Polymère",
+    key: "etfe_membrane", nom: "ETFE (Architectural Membrane)", categorie: "Polymer",
     fields: ["Architecture"],
     co2_kg_par_kg: 12.0, co2_range: [9.0, 16.0], module_elastique_gpa: 0.8, stress_shielding: 1,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 30,
@@ -772,7 +772,7 @@ export const MATERIAUX: Record<string, Material> = {
   },
   // ═══════ METAL — Architecture / Mechanics ═══════
   acier_cor_ten: {
-    key: "acier_cor_ten", nom: "Acier Corten (Acier Patinable)", categorie: "Métal",
+    key: "acier_cor_ten", nom: "Corten Steel (Weathering Steel)", categorie: "Metal",
     fields: ["Architecture"],
     co2_kg_par_kg: 2.5, co2_range: [1.8, 3.5], module_elastique_gpa: 200.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 80,
@@ -784,7 +784,7 @@ export const MATERIAUX: Record<string, Material> = {
     reference: "ArcelorMittal; Ecoinvent 3.9",
   },
   acier_inox_304: {
-    key: "acier_inox_304", nom: "Acier Inoxydable 304", categorie: "Métal",
+    key: "acier_inox_304", nom: "Stainless Steel 304", categorie: "Metal",
     fields: ["Architecture", "Mechanics"],
     co2_kg_par_kg: 4.8, co2_range: [3.5, 6.5], module_elastique_gpa: 193.0, stress_shielding: 5,
     recyclable: true, biodegradable: false, duree_vie_implant_ans: 50,

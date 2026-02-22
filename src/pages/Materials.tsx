@@ -15,26 +15,26 @@ import { categoryTo3D } from "@/components/materials3d/MaterialScene";
 const MaterialScene = lazy(() => import("@/components/materials3d/MaterialScene"));
 
 const categoryStyles: Record<MaterialCategory, { pill: string; gradient: string }> = {
-  "Métal": { pill: "bg-slate-100 text-slate-700", gradient: "from-slate-200 via-blue-100 to-slate-300" },
-  "Polymère": { pill: "bg-teal-50 text-teal-700", gradient: "from-teal-100 via-white to-teal-50" },
-  "Céramique": { pill: "bg-amber-50 text-amber-800", gradient: "from-amber-50 via-orange-50 to-yellow-50" },
-  "Biosourcé": { pill: "bg-green-50 text-green-700", gradient: "from-green-100 via-emerald-50 to-green-50" },
+  "Metal": { pill: "bg-slate-100 text-slate-700", gradient: "from-slate-200 via-blue-100 to-slate-300" },
+  "Polymer": { pill: "bg-teal-50 text-teal-700", gradient: "from-teal-100 via-white to-teal-50" },
+  "Ceramic": { pill: "bg-amber-50 text-amber-800", gradient: "from-amber-50 via-orange-50 to-yellow-50" },
+  "Biosourced": { pill: "bg-green-50 text-green-700", gradient: "from-green-100 via-emerald-50 to-green-50" },
   "Composite": { pill: "bg-purple-50 text-purple-700", gradient: "from-purple-200 via-indigo-100 to-slate-800" },
-  "Superalliage": { pill: "bg-red-50 text-red-700", gradient: "from-red-200 via-orange-100 to-red-300" },
-  "Alliage Léger": { pill: "bg-sky-50 text-sky-700", gradient: "from-sky-100 via-blue-50 to-sky-200" },
-  "Bois": { pill: "bg-yellow-50 text-yellow-800", gradient: "from-yellow-100 via-amber-50 to-yellow-200" },
-  "Naturel": { pill: "bg-lime-50 text-lime-700", gradient: "from-lime-100 via-green-50 to-lime-50" },
+  "Superalloy": { pill: "bg-red-50 text-red-700", gradient: "from-red-200 via-orange-100 to-red-300" },
+  "Light Alloy": { pill: "bg-sky-50 text-sky-700", gradient: "from-sky-100 via-blue-50 to-sky-200" },
+  "Wood": { pill: "bg-yellow-50 text-yellow-800", gradient: "from-yellow-100 via-amber-50 to-yellow-200" },
+  "Natural": { pill: "bg-lime-50 text-lime-700", gradient: "from-lime-100 via-green-50 to-lime-50" },
 };
 
 type Filter = "All" | MaterialCategory | MaterialField;
-const categoryFilters: MaterialCategory[] = ["Métal", "Polymère", "Céramique", "Biosourcé", "Composite", "Superalliage", "Alliage Léger", "Bois", "Naturel"];
+const categoryFilters: MaterialCategory[] = ["Metal", "Polymer", "Ceramic", "Biosourced", "Composite", "Superalloy", "Light Alloy", "Wood", "Natural"];
 const fieldFilters: MaterialField[] = ["Medicine", "Architecture", "Mechanics", "Aerospace"];
 
 const FIELD_LABELS: Record<MaterialField, string> = {
-  Medicine: "🩺 Médecine",
-  Architecture: "🏗️ Architecture",
-  Mechanics: "⚙️ Mécanique",
-  Aerospace: "🚀 Aérospatial",
+  Medicine: "Medicine",
+  Architecture: "Architecture",
+  Mechanics: "Mechanics",
+  Aerospace: "Aerospace",
 };
 
 const CO2Badge = ({ co2 }: { co2: number }) => {
@@ -51,31 +51,31 @@ const StaticPreview = ({ category }: { category: MaterialCategory }) => {
   const s = categoryStyles[category];
   return (
     <div className={`w-full h-full rounded-xl bg-gradient-to-br ${s.gradient} flex items-center justify-center relative overflow-hidden`}>
-      {(category === "Métal" || category === "Alliage Léger") && (
+      {(category === "Metal" || category === "Light Alloy") && (
         <>
           <div className="w-10 h-24 rounded-md bg-white/20 backdrop-blur-sm" style={{ boxShadow: "inset -2px 0 8px rgba(0,0,0,0.1), 4px 4px 12px rgba(0,0,0,0.08)" }} />
           {[0,1,2,3,4].map(i => <div key={i} className="absolute w-12 h-[1.5px] bg-white/30" style={{ top: `${30 + i*10}%` }} />)}
         </>
       )}
-      {category === "Polymère" && (
+      {category === "Polymer" && (
         <>
           {[0,1,2].map(i => <div key={i} className="absolute rounded-lg bg-white/25 backdrop-blur-sm" style={{ width: `${70-i*15}%`, height: "14%", top: `${25+i*20}%`, left: `${15+i*5}%`, transform: `rotate(${-3+i*3}deg)` }} />)}
         </>
       )}
-      {(category === "Céramique" || category === "Naturel") && (
+      {(category === "Ceramic" || category === "Natural") && (
         <>
           <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm" style={{ boxShadow: "inset -3px -3px 10px rgba(0,0,0,0.05), 3px 3px 10px rgba(0,0,0,0.06)" }} />
           <div className="absolute w-8 h-8 rotate-45 bg-white/20 top-6 right-8 rounded-sm" />
         </>
       )}
-      {(category === "Biosourcé" || category === "Bois") && (
+      {(category === "Biosourced" || category === "Wood") && (
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 140 140">
           <path d="M10 70 Q40 30 70 70 Q100 110 130 70" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="3" />
           <path d="M10 85 Q40 50 70 85 Q100 120 130 85" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="2" />
           <path d="M10 55 Q40 20 70 55 Q100 90 130 55" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="2" />
         </svg>
       )}
-      {(category === "Composite" || category === "Superalliage") && (
+      {(category === "Composite" || category === "Superalloy") && (
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 140 140">
           {[[40,30],[80,25],[60,60],[30,80],[100,70],[55,100],[90,95]].map(([x,y],i) => (
             <circle key={i} cx={x} cy={y} r="5" fill="rgba(255,255,255,0.5)" />
@@ -135,7 +135,7 @@ const MaterialCard = ({ material }: { material: Material }) => {
           {material.recyclable && <span className="text-[9px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded-full">♻️</span>}
           {material.fields && material.fields.length > 0 && (
             <span className="text-[9px] font-bold text-violet-700 bg-violet-100 px-1.5 py-0.5 rounded-full">
-              {material.fields.map(f => f === "Medicine" ? "🩺" : f === "Architecture" ? "🏗️" : f === "Mechanics" ? "⚙️" : "🚀").join("")}
+              {material.fields.join(", ")}
             </span>
           )}
         </div>
@@ -184,7 +184,7 @@ const Materials = () => {
 
       {/* Field filters */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs text-muted-foreground font-medium mr-1">Domaine :</span>
+        <span className="text-xs text-muted-foreground font-medium mr-1">Field:</span>
         {fieldFilters.map((f) => (
           <button
             key={f}
@@ -202,7 +202,7 @@ const Materials = () => {
 
       {/* Category filters */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs text-muted-foreground font-medium mr-1">Catégorie :</span>
+        <span className="text-xs text-muted-foreground font-medium mr-1">Category:</span>
         <button
           onClick={() => setActiveFilter("All")}
           className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
