@@ -34,7 +34,7 @@ const ChatSlide = () => {
             className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
             {playing ? <Square className="h-3 w-3" /> : <Volume2 className="h-3.5 w-3.5" />}
-            {playing ? "Arrêter" : "Écouter"}
+            {playing ? "Stop" : "Listen"}
           </button>
         </div>
       </div>
