@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Volume2, Square } from "lucide-react";
+import { ChevronLeft, ChevronRight, Mic, Square } from "lucide-react";
 import { useSimpleTTS } from "@/hooks/useTTS";
 
 /* ── Slide content (chat mockup) ── */
@@ -33,7 +33,7 @@ const ChatSlide = () => {
             onClick={() => play(demoText)}
             className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
-            {playing ? <Square className="h-3 w-3" /> : <Volume2 className="h-3.5 w-3.5" />}
+            {playing ? <Square className="h-3 w-3" /> : <Mic className="h-3.5 w-3.5" />}
             {playing ? "Stop" : "Listen"}
           </button>
         </div>

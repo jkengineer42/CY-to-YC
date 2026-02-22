@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, ArrowUp, Volume2, Square } from "lucide-react";
+import { Search, ArrowUp, Mic, Square } from "lucide-react";
 import { useSimpleTTS } from "@/hooks/useTTS";
 
 const PLACEHOLDER_PHRASES: Record<string, string[]> = {
@@ -155,7 +155,7 @@ const AnimatedChatBox = ({ field, specialty, optimization }: AnimatedChatBoxProp
             onClick={playTts}
             className="h-9 w-9 rounded-full border border-border flex items-center justify-center shrink-0 hover:scale-105 transition-transform text-muted-foreground hover:text-foreground"
           >
-            {ttsPlaying ? <Square className="h-3.5 w-3.5" /> : <Volume2 className="h-4 w-4" />}
+            {ttsPlaying ? <Square className="h-3.5 w-3.5" /> : <Mic className="h-4 w-4" />}
           </button>
           <button
             onClick={handleSubmit}

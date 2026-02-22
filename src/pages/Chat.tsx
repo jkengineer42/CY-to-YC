@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { Send, Bot, User, Leaf, Shield, TrendingDown, LayoutDashboard, Volume2, Square } from "lucide-react";
+import { Send, Bot, User, Leaf, Shield, TrendingDown, LayoutDashboard, Mic, Square } from "lucide-react";
 import { toast } from "sonner";
 import ChatOnboarding from "@/components/ChatOnboarding";
 import ChatHistory from "@/components/ChatHistory";
@@ -340,7 +340,7 @@ const Chat = () => {
                     {ttsPlaying === i ? (
                       <Square className="h-3 w-3" />
                     ) : (
-                      <Volume2 className="h-3.5 w-3.5" />
+                      <Mic className="h-3.5 w-3.5" />
                     )}
                     {ttsPlaying === i ? "Stop" : "Listen"}
                   </button>
@@ -403,7 +403,7 @@ const Chat = () => {
             }}
             className="h-8 w-8 rounded-full border border-border flex items-center justify-center shrink-0 hover:scale-105 transition-transform text-muted-foreground hover:text-foreground"
           >
-            {ttsPlaying === -1 ? <Square className="h-3 w-3" /> : <Volume2 className="h-3.5 w-3.5" />}
+            {ttsPlaying === -1 ? <Square className="h-3 w-3" /> : <Mic className="h-3.5 w-3.5" />}
           </button>
           <button
             onClick={() => handleSend()}
