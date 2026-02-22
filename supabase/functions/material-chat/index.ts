@@ -93,48 +93,48 @@ Use the same ---CARD--- format. Consider weight-to-strength ratio, radiation res
 /** Allowed materials per field — AI must ONLY recommend from this list */
 const ALLOWED_MATERIALS: Record<string, string[]> = {
   Medicine: [
-    "Titane Grade 5 (Ti-6Al-4V CNC)", "Titane Grade 23 (Ti-6Al-4V ELI)", "Titane Poreux Imprimé 3D (SLM)",
-    "Acier Inoxydable 316L", "Cobalt-Chrome (CoCrMo)", "Tantale Poreux (Trabecular Metal™)",
-    "Nitinol NiTi (Superélastique)", "Magnésium Bio-résorbable (WE43)",
-    "PEEK Standard (Victrex® 450G)", "UHMWPE Réticulé + Vitamine E",
-    "PLA Biosourcé (Acide Polylactique)", "PLGA 75:25 (Copolymère Résorbable)",
-    "PMMA Chirurgical (Ciment Acrylique)", "Polyuréthane Biostable (Biospan™)",
-    "ePTFE Gore-Tex® Expanded", "Silicone Médical Grade Implant",
-    "Hydroxyapatite Synthétique (HA)", "Alumine Al₂O₃ (BIOLOX® forte)",
-    "Composite AMC Alumine-Zircone (BIOLOX® delta)", "Zircone Y-TZP (Stabilisée Yttrium)",
-    "β-TCP (Phosphate Tricalcique Bêta)", "Bioglass 45S5 (Verre Bioactif)",
-    "Os Allogène Humain (Banque d'Os)", "Collagène Bovin Réticulé",
-    "Acide Hyaluronique Réticulé (HA-XL)", "Xénogreffe Porcine Décellularisée",
-    "Pyrocarbone (LTI PyC)", "PEEK Fibres Carbone (CFR-PEEK)",
-    "Scaffold PCL Imprimé 3D (Polycaprolactone)", "Dacron Polyester Tressé (Woven PET)",
+    "Titanium Grade 5 (Ti-6Al-4V CNC)", "Titanium Grade 23 (Ti-6Al-4V ELI)", "3D-Printed Porous Titanium (SLM)",
+    "Stainless Steel 316L", "Cobalt-Chrome (CoCrMo)", "Porous Tantalum (Trabecular Metal)",
+    "Nitinol NiTi (Superelastic)", "Bioresorbable Magnesium (WE43)",
+    "PEEK Standard (Victrex 450G)", "Crosslinked UHMWPE + Vitamin E",
+    "Biosourced PLA (Polylactic Acid)", "PLGA 75:25 (Resorbable Copolymer)",
+    "Surgical PMMA (Acrylic Cement)", "Biostable Polyurethane (Biospan)",
+    "ePTFE Gore-Tex Expanded", "Medical Grade Silicone Implant",
+    "Synthetic Hydroxyapatite (HA)", "Alumina Al2O3 (BIOLOX forte)",
+    "AMC Alumina-Zirconia Composite (BIOLOX delta)", "Zirconia Y-TZP (Yttrium Stabilized)",
+    "Beta-TCP (Beta Tricalcium Phosphate)", "Bioglass 45S5 (Bioactive Glass)",
+    "Human Allograft Bone (Bone Bank)", "Crosslinked Bovine Collagen",
+    "Crosslinked Hyaluronic Acid (HA-XL)", "Decellularized Porcine Xenograft",
+    "Pyrocarbon (LTI PyC)", "Carbon Fiber PEEK (CFR-PEEK)",
+    "3D-Printed PCL Scaffold (Polycaprolactone)", "Woven Dacron Polyester (Woven PET)",
   ],
   Architecture: [
-    "Bois CLT (Cross-Laminated Timber)", "Bois Lamellé-Collé (Glulam)", "Bambou Lamellé Structural",
-    "Béton de Chanvre (Chanvre-Chaux)", "Laine de Bois (Fibre Isolante)", "Liège Expansé (Isolant)",
-    "Terre Crue Compressée (BTC)", "Bottes de Paille Porteuses",
-    "Composite Lin-Époxy (Bio-composite)", "Béton Bas Carbone (CEM III/B)",
-    "Géopolymère (Laitier + Métakaolin)", "Polycarbonate (PC)", "ETFE (Membrane Architecturale)",
-    "Acier Corten (Acier Patinable)", "Acier Inoxydable 304", "Acier Inoxydable 316L",
+    "CLT (Cross-Laminated Timber)", "Glulam (Glued Laminated Timber)", "Structural Laminated Bamboo",
+    "Hempcrete (Hemp-Lime)", "Wood Fiber Insulation", "Expanded Cork Insulation",
+    "Compressed Earth Block (CEB)", "Load-Bearing Straw Bales",
+    "Flax-Epoxy Composite (Bio-composite)", "Low-Carbon Concrete (CEM III/B)",
+    "Geopolymer (Slag + Metakaolin)", "Polycarbonate (PC)", "ETFE (Architectural Membrane)",
+    "Corten Steel (Weathering Steel)", "Stainless Steel 304", "Stainless Steel 316L",
   ],
   Mechanics: [
-    "Inconel 718 (Ni-Cr-Fe)", "Inconel 617 (Solution Strengthened)", "MA754 ODS (Ni-Cr-Y₂O₃)",
-    "Hastelloy X (Ni-Cr-Fe-Mo)", "Aluminium 7075-T6", "Aluminium 2024-T3",
-    "Titane Grade 2 (CP Ti)", "SiC-SiC CMC (Composite Céramique)",
-    "Fibre de Carbone T700/Époxy", "Kevlar® 49 / Aramide",
-    "Carbure de Silicium (SiC)", "Nitrure de Silicium (Si₃N₄)",
-    "Composite Lin-Époxy (Bio-composite)", "Polycarbonate (PC)",
-    "Acier Inoxydable 304", "Acier Inoxydable 316L",
-    "Titane Grade 5 (Ti-6Al-4V CNC)", "Cobalt-Chrome (CoCrMo)",
-    "PEEK Fibres Carbone (CFR-PEEK)",
+    "Inconel 718 (Ni-Cr-Fe)", "Inconel 617 (Solution Strengthened)", "MA754 ODS (Ni-Cr-Y2O3)",
+    "Hastelloy X (Ni-Cr-Fe-Mo)", "Aluminum 7075-T6", "Aluminum 2024-T3",
+    "Titanium Grade 2 (CP Ti)", "SiC-SiC CMC (Ceramic Matrix Composite)",
+    "Carbon Fiber T700/Epoxy", "Kevlar 49 / Aramid",
+    "Silicon Carbide (SiC)", "Silicon Nitride (Si3N4)",
+    "Flax-Epoxy Composite (Bio-composite)", "Polycarbonate (PC)",
+    "Stainless Steel 304", "Stainless Steel 316L",
+    "Titanium Grade 5 (Ti-6Al-4V CNC)", "Cobalt-Chrome (CoCrMo)",
+    "Carbon Fiber PEEK (CFR-PEEK)",
   ],
   Aerospace: [
-    "Inconel 718 (Ni-Cr-Fe)", "Inconel 617 (Solution Strengthened)", "MA754 ODS (Ni-Cr-Y₂O₃)",
-    "Hastelloy X (Ni-Cr-Fe-Mo)", "Aluminium 7075-T6", "Aluminium 2024-T3",
-    "Titane Grade 2 (CP Ti)", "SiC-SiC CMC (Composite Céramique)",
-    "Fibre de Carbone T700/Époxy", "Fibre de Carbone M55J/Époxy (Haut Module)",
-    "Kevlar® 49 / Aramide", "Carbure de Silicium (SiC)", "Nitrure de Silicium (Si₃N₄)",
-    "Titane Grade 5 (Ti-6Al-4V CNC)", "Titane Grade 23 (Ti-6Al-4V ELI)",
-    "PEEK Fibres Carbone (CFR-PEEK)",
+    "Inconel 718 (Ni-Cr-Fe)", "Inconel 617 (Solution Strengthened)", "MA754 ODS (Ni-Cr-Y2O3)",
+    "Hastelloy X (Ni-Cr-Fe-Mo)", "Aluminum 7075-T6", "Aluminum 2024-T3",
+    "Titanium Grade 2 (CP Ti)", "SiC-SiC CMC (Ceramic Matrix Composite)",
+    "Carbon Fiber T700/Epoxy", "Carbon Fiber M55J/Epoxy (High Modulus)",
+    "Kevlar 49 / Aramid", "Silicon Carbide (SiC)", "Silicon Nitride (Si3N4)",
+    "Titanium Grade 5 (Ti-6Al-4V CNC)", "Titanium Grade 23 (Ti-6Al-4V ELI)",
+    "Carbon Fiber PEEK (CFR-PEEK)",
   ],
 };
 serve(async (req) => {
@@ -260,20 +260,20 @@ Use the EXACT names as written above in your ---CARD--- blocks. If no material i
     if (!response.ok) {
       if (response.status === 429) {
         return new Response(
-          JSON.stringify({ error: "Limite de requêtes atteinte, réessayez dans quelques instants." }),
+          JSON.stringify({ error: "Rate limit reached, please try again shortly." }),
           { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
       if (response.status === 402) {
         return new Response(
-          JSON.stringify({ error: "Crédits AI épuisés. Ajoutez des crédits dans Settings → Workspace → Usage." }),
+          JSON.stringify({ error: "AI credits exhausted. Add credits in Settings → Workspace → Usage." }),
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
       const t = await response.text();
       console.error("AI gateway error:", response.status, t);
       return new Response(
-        JSON.stringify({ error: "Erreur du service AI" }),
+        JSON.stringify({ error: "AI service error" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
