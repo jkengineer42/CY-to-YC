@@ -205,12 +205,12 @@ const Index = () => {
       {/* Summary section */}
       <section className="relative z-10 px-6 py-20">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14 max-w-2xl mx-auto"
-        >
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14 max-w-2xl mx-auto">
+
           <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-4">
             How Materia works
           </h2>
@@ -225,39 +225,39 @@ const Index = () => {
               icon: Search,
               title: "Describe your needs",
               description: "Tell us your constraints in plain language — field, specialty, budget, sustainability goals. Our AI understands it all.",
-              color: "rgba(244,171,186,0.25)",
+              color: "rgba(244,171,186,0.25)"
             },
             {
               icon: BarChart3,
               title: "Get scored recommendations",
               description: "Receive material suggestions ranked by performance, cost, and environmental impact with detailed sustainability metrics.",
-              color: "rgba(196,181,253,0.25)",
+              color: "rgba(196,181,253,0.25)"
             },
             {
               icon: ShieldCheck,
               title: "Trace & verify",
               description: "Every material comes with full supply chain traceability — from raw extraction to delivery, verified at each step.",
-              color: "rgba(253,186,116,0.25)",
-            },
-          ].map((item, i) => (
+              color: "rgba(253,186,116,0.25)"
+            }].
+            map((item, i) =>
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-card/70 backdrop-blur-sm rounded-2xl border border-border p-6 text-center"
-            >
+              className="bg-card/70 backdrop-blur-sm rounded-2xl border border-border p-6 text-center">
+
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
-                style={{ backgroundColor: item.color }}
-              >
+                style={{ backgroundColor: item.color }}>
+
                 <item.icon className="w-5 h-5 text-foreground/80" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
             </motion.div>
-          ))}
+            )}
         </div>
       </section>
 
@@ -360,7 +360,7 @@ const Index = () => {
 
               </div>
               <div className="text-center">
-                <p className="font-semibold text-foreground text-sm">{member.name}</p>
+                
                 <p className="text-xs text-muted-foreground">{member.role}</p>
               </div>
             </motion.div>
