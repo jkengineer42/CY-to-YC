@@ -236,7 +236,7 @@ Use the EXACT names as written above in your ---CARD--- blocks. If no material i
       materialConstraint +
       `\n\nUser specialty: ${specialty || "General"}` +
       `\nOptimization priority: ${optimization || "Most Optimal"}` +
-      `\nAlways respond in the same language as the user's message.`;
+      `\nIMPORTANT: Always respond in English, regardless of the language the user writes in.`;
 
     const response = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
